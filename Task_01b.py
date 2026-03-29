@@ -1,29 +1,22 @@
+# Task 01b - Classify Temperature
+# Write a function called classify_temperature(temp)
+# that returns:
+# "Cold" if temp < 15
+# "Mild" if temp is 15 to 24
+# "Hot" if temp >= 25
+#
+# Example:
+# classify_temperature(12) -> "Cold"
 
-#Task 1b More Echos
-'''
-Task 1 More Echo (2marks)
-Part b
-
-Add to the code from part 1 to print out the echo on a separate line. Your program should work like this:
-=========================
-Shout: hello
-hello hello hello
-
-hello
-hello
-hello
-=========================  
-'''
-def main():
-    x="Task1b"
-    #===============================
+def classify_temperature(temp):
     # Write your code here
+    pass
 
 
+def main():
+    temp = int(input("Enter temperature: "))
+    print(classify_temperature(temp))
 
 
-    # End of your code here
-    # #===============================
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
