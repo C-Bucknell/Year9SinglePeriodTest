@@ -28,6 +28,8 @@ You will complete the following task files:
 - `Task_02b.py`
 - `Task_03.py`
 - `Task_04.py`
+- `Task_05a.py`
+- `Task_05b.py`
 
 Matching test files are also included:
 - `test_Task_01a.py`
@@ -36,6 +38,8 @@ Matching test files are also included:
 - `test_Task_02b.py`
 - `test_Task_03.py`
 - `test_Task_04.py`
+- `test_Task_05a.py`
+- `test_Task_05b.py`
 
 ## Running a Task
 To run one of your task files in the terminal:
