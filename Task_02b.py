@@ -1,31 +1,21 @@
-#Task 2b Marco Polo
-'''
-Task 2 Marco Polo (2marks)
-Part b
+# Task 02b - Extract Even Numbers
+# Write a function called extract_even_numbers(numbers)
+# that takes a list of integers and returns a new list
+# containing only the even numbers.
+#
+# Example:
+# extract_even_numbers([1, 2, 3, 4, 5, 6]) -> [2, 4, 6]
 
-Modify the code from part 1 to accept any variation of Marco capitalised. 
-
-For example, the program should work for lower case (marco) or mixed case (mArcO)
-
-Your program should work like this when you say Marco!:
-=========================
-Text: marco!
-Polo!
-========================= 
-=========================
-Text: mArCo!
-Polo!
-========================= 
-
-'''
-def main():
-    x="Task2b"
-    #===============================
+def extract_even_numbers(numbers):
     # Write your code here
-    
+    pass
 
-    # End of your code here
-    #===============================
 
-if __name__ == '__main__':
+def main():
+    user_input = input("Enter numbers separated by commas: ")
+    numbers = [int(x.strip()) for x in user_input.split(",") if x.strip() != ""]
+    print(extract_even_numbers(numbers))
+
+
+if __name__ == "__main__":
     main()
