@@ -1,34 +1,17 @@
 import unittest
-from unittest.mock import patch
-from io import StringIO
-import sys
-from Task_01a import main
+from Task_01a import calculate_total
+
 
 class TestTask01a(unittest.TestCase):
+    def test_whole_numbers(self):
+        self.assertEqual(calculate_total(5, 2), 10)
 
-    @patch('builtins.input', return_value='hello')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_example_output(self, mock_stdout, mock_input):
-        """Test with the example input 'hello' from the problem statement"""
-        main()
-        expected_output = "hello hello hello"
-        self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
+    def test_decimal_price(self):
+        self.assertEqual(calculate_total(4.5, 3), 13.5)
 
-    @patch('builtins.input', return_value='test')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_different_input(self, mock_stdout, mock_input):
-        """Test with a different input 'test'"""
-        main()
-        expected_output = "test test test"
-        self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
+    def test_zero_quantity(self):
+        self.assertEqual(calculate_total(9.99, 0), 0)
 
-    @patch('builtins.input', return_value='a')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_empty_input(self, mock_stdout, mock_input):
-        """Test with a single character"""
-        main()
-        expected_output = "a a a"
-        self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
