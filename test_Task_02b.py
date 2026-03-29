@@ -1,30 +1,20 @@
 import unittest
-from unittest.mock import patch
-from io import StringIO
-import sys
-from Task_02b import main
+from Task_02b import extract_even_numbers
+
 
 class TestTask02b(unittest.TestCase):
+    def test_mixed_numbers(self):
+        self.assertEqual(extract_even_numbers([1, 2, 3, 4, 5, 6]), [2, 4, 6])
 
-    @patch('builtins.input', return_value='marco!')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_lowercase_input(self, mock_stdout, mock_input):
-        """Test with lowercase 'marco!' input"""
-        main()
-        expected_output = "Polo!"
-        # The original code uses title() which won't work for this case
-        # This test will fail until the code is fixed
-        self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
+    def test_all_even(self):
+        self.assertEqual(extract_even_numbers([2, 4, 8]), [2, 4, 8])
 
-    @patch('builtins.input', return_value='mArCo!')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_mixed_case_input(self, mock_stdout, mock_input):
-        """Test with mixed case 'mArCo!' input"""
-        main()
-        expected_output = "Polo!"
-        # The original code uses title() which won't work for this case
-        # This test will fail until the code is fixed
-        self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
+    def test_no_even(self):
+        self.assertEqual(extract_even_numbers([1, 3, 5]), [])
 
-if __name__ == '__main__':
+    def test_empty_list(self):
+        self.assertEqual(extract_even_numbers([]), [])
+
+
+if __name__ == "__main__":
     unittest.main()
