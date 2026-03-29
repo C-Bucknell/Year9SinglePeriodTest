@@ -9,7 +9,7 @@ You must complete the code in each task file so that the program works correctly
 50 minutes
 
 ## Total Marks
-30 marks
+40 marks
 
 ## Instructions
 - Complete each task in its matching Python file.
@@ -55,5 +55,13 @@ To run a test file in the terminal:
 python test_Task_01a.py
 ```
 
-## Reminder
-Try to solve each task yourself first.
+## How marks are awarded
+Autograding uses automated checks to test whether your program works correctly.
+
+Each task is worth a set number of marks. These marks are based on:
+- the complexity of the task
+- the amount of logic required
+- the number of programming concepts involved
+- whether the solution works correctly across different cases
+
+This means that the number of automated checks for a task may not always exactly match the number of marks for that task.
