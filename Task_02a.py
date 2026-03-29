@@ -1,38 +1,22 @@
-#Task 2a Marco Polo
-'''
-Task 2 Marco Polo (4marks)
-Part a
+# Task 02a - Count Vowels
+# Write a function called count_vowels(text)
+# that returns the number of vowels in the string.
+# Count both uppercase and lowercase vowels.
+#
+# Vowels are: a, e, i, o, u
+#
+# Example:
+# count_vowels("Education") -> 5
 
-Marco! Polo! is a popular game of tag played in a swimming pool.  The player who is 'it' shouts 'Marco!' 
-and all other players must reply 'Polo!'
+def count_vowels(text):
+    # Write your code here
+    pass
 
-Write a program to play Marco! Polo! with you.  It should read in a line of text, and if the line of text 
-is Marco! print out Polo!
 
-Your program should work like this when you say Marco!:
-=========================
-Text: Marco!
-Polo!
-========================= 
-
-If you say anything else the program should do nothing:
-=========================
-Text: Hello
-=========================
-
-If you say more than Marco!, the program should do nothing:
-=========================
-Text: Why is this game called Marco! Polo! anyway?
-=========================
-'''
 def main():
-  x="Task2a"
-  #===============================
-  # Write your code here
-    
+    text = input("Enter text: ")
+    print(count_vowels(text))
 
-  # End of your code here
-  #===============================
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
